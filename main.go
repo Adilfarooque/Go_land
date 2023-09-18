@@ -6,6 +6,13 @@ import (
 
 type WeaponTypes int
 
+const(
+	Axe WeaponTypes = iota
+	Sword
+	WoodenStick
+	Knife
+)
+
 func getDamage(weapontype string)int{
 	switch weapontype{
 	case "Axe":
