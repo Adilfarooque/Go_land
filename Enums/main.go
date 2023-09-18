@@ -4,15 +4,23 @@ import "fmt"
 
 type WeaponType int
 
-func getDamage(weapontype string) int {
+const(
+	Axe WeaponType = iota
+	Woodenstick 
+	Knife
+	Rolling_pin
+
+)
+
+func getDamage(weapontype WeaponType) int {
 	switch weapontype {
-	case "Axe":
+	case Axe:
 		return 100
-	case "Woodenstick":
+	case Woodenstick:
 		return 10
-	case "Knife":
+	case Knife:
 		return 50
-	case "Rolling pin":
+	case Rolling_pin:
 		return 70
 	default:
 		panic("Weapon Does not exist..")
@@ -20,5 +28,5 @@ func getDamage(weapontype string) int {
 }
 
 func main() {
-	fmt.Println("Damage Of Weapon ", getDamage("Knife"))
+	fmt.Println("Damage Of Weapon ", getDamage(Rolling_pin))
 }
