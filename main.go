@@ -3,8 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	str:=getString()
-	fmt.Println("Is it ?...",str)
-	fmt.Println("The number is: ", getNumber())
+	usr:=User{
+		username: "muhammed anas",
+		age: 23,
+		Address: "Poonghadan house",
+	}
+	fmt.Println(usr)
 }
 
