@@ -11,5 +11,5 @@ func main() {
 		Username: util.GetName(),
 		Age:      util.GetAge(),
 	}
-	fmt.Println(usr)
+	fmt.Printf("The user is %+v", usr)
 }
