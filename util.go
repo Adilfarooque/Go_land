@@ -1,9 +1,13 @@
 package main
 
-func getNumber()int{
+func getAge()int{
 	return 11
 }
 
-func getString()string{
-	return "Make Me Happy.."
+func getName()string{
+	return "Mohammed Salah"
+}
+
+func getAddress()string{
+	return "Eygypt"
 }
