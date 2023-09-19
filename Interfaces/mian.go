@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type finishers interface{
+type Finishers interface{
 	KickBall()
 }
 
@@ -26,7 +26,9 @@ func (m Messi)KickBall()int{
 	return m.stamina + m.power * m.curve
 }
 
-
+func Shot(e Finishers){
+	e.KickBall()
+}
 
 
 func main() {
