@@ -2,20 +2,18 @@ package main
 
 import (
 	"fmt"
-
-	"golang.org/x/tools/go/analysis/passes/nilfunc"
 )
 
 type NumberStorer interface {
 	GetAll() ([]int, error)
 	Put(int) error
 }
-type PostgresNumberStore struct{
+type PostgresNumberStore struct {
 	// some db connection
 }
 
 func (p PostgresNumberStore) GetAll() ([]int, error) {
-	return []int{1, 3, 9,7,99}, nil
+	return []int{1, 3, 9, 7, 99}, nil
 }
 
 func (p PostgresNumberStore) Put(number int) error {
@@ -26,8 +24,6 @@ func (p PostgresNumberStore) Put(number int) error {
 type MongoDBNumberStore struct {
 	//some values
 }
-
-
 
 func (m MongoDBNumberStore) GetAll() ([]int, error) {
 	return []int{1, 3, 9}, nil
@@ -47,8 +43,7 @@ func main() {
 		numberStore: MongoDBNumberStore{},
 	}
 
-	err:=apiServer.numberStore.Put(12)
-	if err != nil{
+	if err := apiServer.numberStore.Put(12); err != nil {
 		panic(err)
 	}
 
@@ -56,7 +51,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	
+
 	fmt.Println(numbers)
 
 }
