@@ -8,7 +8,7 @@ import (
 
 func main() {
 	usr := Types.User{
-		Username: "James Milner",
+		Username: util.GetName(),
 		Age:      util.GetAge(),
 	}
 	fmt.Println(usr)
