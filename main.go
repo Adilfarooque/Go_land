@@ -1,12 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"goworld/Types"
+)
 
 func main() {
-
-	usr := User{
-		username: getName(),
-		age:      getAge(),
+	usr := Types.User{
+		Username: getName(),
+		Age:      getAge(),
 		Address:  getAddress(),
 	}
 	fmt.Println(usr)
