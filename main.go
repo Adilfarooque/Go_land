@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 	"goworld/Types"
+	util "goworld/Util"
 )
 
 func main() {
 	usr := Types.User{
-		Username: getName(),
-		Age:      getAge(),
-		Address:  getAddress(),
+		Username: "James Milner",
+		Age:      util.GetAge(),
 	}
 	fmt.Println(usr)
 }
