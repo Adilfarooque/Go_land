@@ -18,6 +18,10 @@ type Messi struct{
 	curve int
 }
 
+func (m Messi)KickBall()int{
+	return m.stamina + m.power * m.curve
+}
+
 
 func main() {
 
