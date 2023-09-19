@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+type finishers interface{
+	KickBall()
+}
+
 type CR7 struct {
 	stamina int
 	power   int
@@ -21,6 +25,8 @@ type Messi struct{
 func (m Messi)KickBall()int{
 	return m.stamina + m.power * m.curve
 }
+
+
 
 
 func main() {
