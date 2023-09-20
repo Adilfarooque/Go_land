@@ -14,8 +14,14 @@ type Messi struct {
 }
 
 func main() {
+
 	m := Messi{
-		curve: 100
+		curve: 100,
+		CR7: CR7{
+			name: "Messi",
+			age:  36,
+			foot: "Left",
+		},
 	}
 	fmt.Println(m)
 }
