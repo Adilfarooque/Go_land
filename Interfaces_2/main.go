@@ -17,7 +17,7 @@ func (p PostgresNumberStore) GetAll() ([]int, error) {
 }
 
 func (p PostgresNumberStore) Put(number int) error {
-	fmt.Println("Store the number into the mongoDB storage")
+	fmt.Println("Store the number into the postGress storage")
 	return nil
 }
 
