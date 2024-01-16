@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 )
+
 type Player interface{
 	KickBall()
 }
@@ -12,16 +13,19 @@ type FootballPlayer struct {
 	stamina int
 	power   int
 }
+
 type CR7 struct {
 	stamina int
 	power   int
 	sui     int
 }
 
+
 func (c CR7) KickBall() {
 	shot := c.stamina + c.power*c.sui
 	fmt.Println("Cr7 fentasitc acrobatic finish...", shot)
 }
+
 
 type Messi struct {
 	stamina int
